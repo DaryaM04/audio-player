@@ -49,4 +49,4 @@ const playBtn = document.querySelector('.audio__play');
 const pauseBtn = document.querySelector('.audio__pause');
 const controlPlay = document.querySelector('.audio__control-play');
 
-let playList = new Audio(audio, playBtn, pauseBtn);
+let playList = new Audio(audio, playBtn, pauseBtn, controlPlay);
