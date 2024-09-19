@@ -254,9 +254,7 @@ audio{
   }
 
   .audio__icon_hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
+    display: none;
   }
 
   .audio__play {

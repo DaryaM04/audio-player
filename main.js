@@ -1,8 +1,10 @@
 class Audio{
-    constructor(audio, play, pause, ){
+    constructor(audio, playBtn, pauseBtn, controlPlay){
         this.audio = audio;
-        this.playBtn = play;
-        this.pauseBtn = pause;
+        this.controlPlay = controlPlay;
+        this.playBtn = playBtn;
+        this.pauseBtn = pauseBtn;
+
         this.isPlay = false;
 
 
@@ -11,21 +13,30 @@ class Audio{
 
     playAudio(){
         audio.play();
+        // this.playBtn.classList.toggle('audio__icon_hidden');
+        // this.pauseBtn.classList.toggle('audio__icon_hidden');
     }
 
     stopAudio(){
+        // this.pauseBtn.classList.toggle('audio__icon_hidden');
+        // this.playBtn.classList.toggle('audio__icon_hidden');
         audio.pause();
     }
+    
 
     clickEvent(){
-            playBtn.addEventListener('click', () => {
+        controlPlay.addEventListener('click', () => {
                 // console.log(this.isPlay);
                 if(!this.isPlay){
                     this.isPlay = !this.isPlay;
+                    this.playBtn.classList.toggle('audio__icon_hidden');
+                    this.pauseBtn.classList.toggle('audio__icon_hidden');
                     this.playAudio();
                 } else if(this.isPlay){
                     this.isPlay = !this.isPlay;
                     // console.log(this.isPlay);
+                    this.pauseBtn.classList.toggle('audio__icon_hidden');
+                    this.playBtn.classList.toggle('audio__icon_hidden');
                     this.stopAudio();
                 }
             })
@@ -36,5 +47,6 @@ class Audio{
 const audio = document.querySelector("audio");
 const playBtn = document.querySelector('.audio__play');
 const pauseBtn = document.querySelector('.audio__pause');
+const controlPlay = document.querySelector('.audio__control-play');
 
 let playList = new Audio(audio, playBtn, pauseBtn);
