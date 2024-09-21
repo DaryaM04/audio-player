@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="playerBg">
-        <img id="bg-img" src="img/guf_sponsorProblem.jpg" alt="bg-image">
+        <img id="bg-img" class="bg-img" src="img/guf_sponsorProblem.jpg" alt="bg-image">
     </div>
     <div class="player__elements">
         <section class="audio_player">
@@ -24,10 +24,11 @@
               <div class="audio__track_progress"></div>
               <input type="range" min="1" max="100" value="0" class="audio__track_active">
               <div class="audio__time">
-                <span>0:00</span>
-                <span>--:--</span>
+                <span class="timer">0:00</span>
+                <span class="audio_duration">--:--</span>
               </div>
               <div class="audio__controls">
+                <div class="dislikeContainer"><i class="fa-solid fa-heart-crack" id="dislike"></i></div>
                 <button type="button" class="audio__control-wrapper audio__control-backward">
                   <img src="icons/backward.svg" alt="Backward" class="audio__icon audio__icon-backward">
                 </button>
@@ -38,6 +39,7 @@
                 <button type="button" class="audio__control-wrapper audio__control-forward">
                   <img src="icons/forward.svg" alt="Forward" class="audio__icon audio__icon-forward">
                 </button>
+                <div class="likeContainer"><i class="fa-sharp fa-regular fa-heart" id="like"></i></i></div>
               </div>
               <div id="volume">
                 <div class="audio__volume-wrapper">
@@ -67,13 +69,13 @@
                   </div>
                 </a>
               </li>
-              <!-- <li class="footer__item">
+              <li class="footer__item">
                 <a class="footer__link" href="https://rs.school/courses/javascript-preschool-ru">
                   <svg width="64" height="64">
                     <use href="icons/sprite.svg#icon-rs_school_js" class="sprite"></use>
                   </svg>
                 </a>
-              </li> -->
+              </li>
             </ul>
             <p class="textFooter">© 2024 Darya. All rights reserved.</p>
           </div>
